@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useState } from "react"
+import { Button } from "../ui/button"
 
 export default function MobileMenu() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -39,12 +40,12 @@ export default function MobileMenu() {
               Menu de Navegação
             </SheetDescription>
 
-            <button
+            <Button
               onClick={() => setMobileOpen(false)}
               className="hover:bg-[#F59F23]/10 p-2 rounded-lg transition-colors"
             >
               <X className="text-[#F59F23] w-5 h-5" />
-            </button>
+            </Button>
           </div>
 
           {/* Links do Menu Mobile */}
@@ -53,7 +54,7 @@ export default function MobileMenu() {
               {/* Somos */}
               <Collapsible open={somosOpen} onOpenChange={setSomosOpen}>
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-medium">
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <span>Somos</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${somosOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
@@ -99,7 +100,7 @@ export default function MobileMenu() {
               {/* Metodologia */}
               <Collapsible open={metodologiaOpen} onOpenChange={setMetodologiaOpen}>
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-medium">
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <span>Metodologia</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${metodologiaOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
@@ -131,7 +132,7 @@ export default function MobileMenu() {
               {/* Diretoria */}
               <Collapsible open={diretoriaOpen} onOpenChange={setDiretoriaOpen}>
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-medium">
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <span>Diretoria</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${diretoriaOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
@@ -157,7 +158,7 @@ export default function MobileMenu() {
               <a
                 href="#depoimentos"
                 onClick={handleLinkClick}
-                className="block px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-medium"
+                className="block px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold"
               >
                 Depoimentos
               </a>
@@ -166,7 +167,7 @@ export default function MobileMenu() {
               <a
                 href="#contatos"
                 onClick={handleLinkClick}
-                className="block px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-medium"
+                className="block px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold"
               >
                 Contatos
               </a>
@@ -175,13 +176,11 @@ export default function MobileMenu() {
 
           {/* Menu Mobile */}
           <div className="p-4 border-t border-[#F59F23]/20">
-            <a
-              href="#plataforma"
-              onClick={handleLinkClick}
-              className="block text-center rounded-full bg-[#F59F23] text-black px-4 py-3 hover:bg-[#F9c57b] transition font-bold"
+            <Button
+              className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
             >
-              PLATAFORMA MENTORAR
-            </a>
+              Plataforma Mentorar
+            </Button>
           </div>
         </div>
       </SheetContent>

@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from "../ui/button"
 import DesktopMenu from "./desktop-menu"
 import MobileMenu from "./mobile-menu"
 
@@ -19,12 +20,11 @@ export default function Header() {
         </div>
 
         {/* Right: button */}
-        <a
-          href="#plataforma"
-          className="rounded-full bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap"
+        <Button
+          className="hidden md:inline-flex rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap"
         >
-          PLATAFORMA MENTORAR
-        </a>
+          Plataforma Mentorar
+        </Button>
       </div>
     </header>
   )
