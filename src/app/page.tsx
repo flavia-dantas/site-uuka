@@ -41,14 +41,13 @@ export default async function Home() {
   const imageHeroItems = landingPage.About.imageHero || [];
 
   return (
-    <>
+    <div className="relative">
       <Header />
 
       <main>
-        {imageHeroItems.length > 0 && (
-          <AboutSection items={imageHeroItems} />
-        )}
+        <AboutSection items={imageHeroItems} />
+
       </main>
-    </>
+    </div>
   );
 }

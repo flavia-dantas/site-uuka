@@ -1,4 +1,5 @@
 'use client'
+
 import { ImageHeroItem } from "@/types/strapi";
 import ImageHeroCarousel from "./image-hero-carousel";
 
@@ -8,9 +9,8 @@ type AboutSectionProps = {
 
 export function AboutSection({ items }: AboutSectionProps) {
   return (
-    <section className="scroll-mt-[72px]">
-
-      <div className="h-[calc(100vh-72px)] w-full">
+    <section className="pt-[72px] h-screen w-full">
+      <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
         <ImageHeroCarousel items={items} />
       </div>
     </section>

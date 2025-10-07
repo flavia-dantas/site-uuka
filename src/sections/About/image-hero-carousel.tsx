@@ -34,7 +34,7 @@ export default function ImageHeroCarousel({ items }: ImageHeroCarouselProps) {
 
           return (
             <CarouselItem key={item.id} className="pl-0 h-full">
-              <div className="relative flex items-center overflow-hidden lg:max-h-[calc(100vh-4rem)] xl:max-h-[calc(100vh-5rem)] h-full w-full">
+              <div className="relative flex items-center overflow-hidden lg:max-h-[calc(100vh-72px)] xl:max-h-[calc(100vh-72px)] h-full w-full">
                 <Image
                   src={imageUrl}
                   alt={alt}
@@ -48,6 +48,6 @@ export default function ImageHeroCarousel({ items }: ImageHeroCarouselProps) {
           );
         })}
       </CarouselContent>
-    </Carousel >
+    </Carousel>
   );
 }
