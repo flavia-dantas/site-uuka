@@ -1,5 +1,13 @@
 import Header from "@/components/Header/header";
 import { AboutSection } from "@/sections/About/about-section";
+import { ContactSection } from "@/sections/Contact/contact-section";
+import HeroSection from "@/sections/Hero/hero-section";
+import { LeadershipSection } from "@/sections/Leadership/leadership-section";
+import { LeadershipSelfAwareness } from "@/sections/LeadershipSelfAwareness/leadership-self-awareness-section";
+import { MethodologySection } from "@/sections/Methodology/methodology-section";
+import { PartnershipsSection } from "@/sections/Partnerships/partnerships-section";
+import { SupportersSection } from "@/sections/Supporters/supporters-section";
+import { TestimonialsSection } from "@/sections/Testimonials/testimonials-section";
 import { ApiResponse } from "@/types/strapi";
 
 async function fetchLandingPage(): Promise<ApiResponse['data']> {
@@ -44,9 +52,16 @@ export default async function Home() {
     <div className="relative">
       <Header />
 
-      <main>
-        <AboutSection items={imageHeroItems} />
-
+      <main className="w-full snap-y snap-mandatory overflow-y-scroll h-screen">
+        <HeroSection items={imageHeroItems} />
+        <AboutSection />
+        <MethodologySection />
+        <LeadershipSelfAwareness />
+        <LeadershipSection />
+        <PartnershipsSection />
+        <SupportersSection />
+        <TestimonialsSection />
+        <ContactSection />
       </main>
     </div>
   );
