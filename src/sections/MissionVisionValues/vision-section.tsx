@@ -2,10 +2,10 @@
 
 export function VisionSection() {
   return (
-    <section id="visao" className="h-screen w-full snap-start bg-[#F59F23] text-black">
+    <section id="visao" className="h-full w-full  bg-[#F59F23] text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
         <div className="max-w-md">
-          <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed py-4">
             Mentorar o maior número de pessoas negras
             para que ocupem lugares de destaque no mercado
             de trabalho, formando pessoas multiplicadoras
