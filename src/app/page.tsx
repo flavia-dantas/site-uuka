@@ -3,11 +3,12 @@ import { AboutSection } from "@/sections/About/about-section";
 import { ContactSection } from "@/sections/Contact/contact-section";
 import HeroSection from "@/sections/Hero/hero-section";
 import { LeadershipSection } from "@/sections/Leadership/leadership-section";
-import { LeadershipSelfAwareness } from "@/sections/LeadershipSelfAwareness/leadership-self-awareness-section";
-import { MethodologySection } from "@/sections/Methodology/methodology-section";
+import { MissionVisionValuesSection } from "@/sections/MissionVisionValues/mission-vision-values-section";
 import { PartnershipsSection } from "@/sections/Partnerships/partnerships-section";
+import { ScheduleMethodologySection } from "@/sections/ScheduleMethodology/schedule-methodology-section";
 import { SupportersSection } from "@/sections/Supporters/supporters-section";
 import { TestimonialsSection } from "@/sections/Testimonials/testimonials-section";
+import { VirtuousCycleLeadershipSection } from "@/sections/VirtuousCycleLeadership/virtuous-cycle-leadership-section";
 import { ApiResponse } from "@/types/strapi";
 
 async function fetchLandingPage(): Promise<ApiResponse['data']> {
@@ -19,7 +20,7 @@ async function fetchLandingPage(): Promise<ApiResponse['data']> {
     'populate[Supporters][populate]': '*',
     'populate[Contact][populate]': '*',
     'populate[Partnerships]': '*',
-    'populate[Leadership][populate]': '*',
+    'populate[Leadership][populate][LeadershipCard][populate]': 'photo',
   });
 
   const url = `${process.env.STRAPI_URL}/api/landing-page?${params.toString()}`;
@@ -47,6 +48,9 @@ async function fetchLandingPage(): Promise<ApiResponse['data']> {
 export default async function Home() {
   const landingPage = await fetchLandingPage();
   const imageHeroItems = landingPage.About.imageHero || [];
+  const supportersData = landingPage.Supporters;
+  const testimonialsData = landingPage.Testimonials;
+  const leadershipData = landingPage.Leadership;
 
   return (
     <div className="relative">
@@ -55,12 +59,13 @@ export default async function Home() {
       <main className="w-full snap-y snap-mandatory overflow-y-scroll h-screen">
         <HeroSection items={imageHeroItems} />
         <AboutSection />
-        <MethodologySection />
-        <LeadershipSelfAwareness />
+        <MissionVisionValuesSection />
+        <ScheduleMethodologySection />
+        <VirtuousCycleLeadershipSection />
         <LeadershipSection />
         <PartnershipsSection />
-        <SupportersSection />
-        <TestimonialsSection />
+        <SupportersSection supporters={supportersData} />
+        <TestimonialsSection testimonials={testimonialsData} />
         <ContactSection />
       </main>
     </div>
