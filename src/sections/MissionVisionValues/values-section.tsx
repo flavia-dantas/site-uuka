@@ -2,7 +2,7 @@
 
 export function ValuesSection() {
   return (
-    <section id="valores" className="h-full w-full bg-white text-black snap-start">
+    <section id="valores" className="h-full w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
         <div className="max-w-4xl">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mb-8">
