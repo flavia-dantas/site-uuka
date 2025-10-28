@@ -13,7 +13,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
 
   if (!testimonialCards || testimonialCards.length === 0) {
     return (
-      <section id="depoimentos" className="pt-[72px] h-screen w-full bg-white text-black snap-start">
+      <section id="depoimentos" className="pt-[72px] h-screen w-full bg-white text-black">
         <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
           <div className="flex-1 flex items-center justify-center">
             <p className="text-center text-black">Nenhum depoimento disponível</p>
@@ -27,7 +27,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
   }
 
   return (
-    <section id="depoimentos" className="pt-[72px] h-screen w-full bg-white text-black snap-start">
+    <section id="depoimentos" className="pt-[72px] h-screen w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
         <div className="flex-1 flex items-center justify-center">
           <div className="w-full max-w-6xl relative">

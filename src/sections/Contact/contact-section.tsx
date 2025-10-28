@@ -7,12 +7,12 @@ export function ContactSection() {
   return (
     <section
       id="contatos"
-      className="pt-[72px] w-full bg-[#F59F23] text-black snap-start"
+      className="pt-[72px] w-full bg-[#F59F23] text-black"
     >
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col gap-12 p-6 md:p-12 lg:p-16 pb-8">
-        {/* Conteúdo principal */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
-          {/* Contatos */}
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-8 gap-8 md:gap-4">
+
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 flex-1 justify-center lg:justify-between items-center">
+
           <div className="flex-1 flex flex-col justify-center">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -38,8 +38,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* CTA Voluntário */}
-          <div className="w-full lg:flex-1 flex items-start lg:items-center justify-center lg:justify-end">
+          <div className="w-full lg:flex-1 flex items-center justify-center lg:justify-end">
             <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl text-center flex flex-col justify-center gap-y-6">
               <p className="text-sm sm:text-base md:text-lg font-medium text-black">
                 Quero fazer parte como voluntário!

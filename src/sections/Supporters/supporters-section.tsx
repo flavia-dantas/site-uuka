@@ -14,7 +14,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
 
   if (!images || images.length === 0) {
     return (
-      <section id="apoiadores" className="pt-[72px] h-screen w-full bg-black text-white snap-start">
+      <section id="apoiadores" className="pt-[72px] h-screen w-full bg-black text-white">
         <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
           <div className="flex-1 flex items-center justify-center">
             <p className="text-center text-white">Nenhum logo disponível</p>
@@ -28,7 +28,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
   }
 
   return (
-    <section id="apoiadores" className="pt-[72px] h-screen w-full bg-black text-white snap-start">
+    <section id="apoiadores" className="pt-[72px] h-screen w-full bg-black text-white">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
 
         <div className="flex-1 flex items-center justify-center">

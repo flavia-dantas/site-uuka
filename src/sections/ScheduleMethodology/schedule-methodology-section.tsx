@@ -12,7 +12,7 @@ export function ScheduleMethodologySection() {
   )
 
   return (
-    <section className="pt-[72px] h-screen w-full snap-start">
+    <section className="w-full">
       <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
         <Carousel
           opts={{

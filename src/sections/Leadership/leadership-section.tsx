@@ -43,7 +43,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
   return (
     <section
       id="diretoria"
-      className="pt-[72px] min-h-screen w-full bg-black text-white snap-start"
+      className="pt-[72px] min-h-screen w-full bg-black text-white"
     >
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
         <div className="flex-1 flex items-center justify-center">
@@ -82,7 +82,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                         onKeyDown={(e) => handleKeyToggle(e, member.id)}
                         aria-pressed={tappedId === member.id}
                       >
-                        <div className="relative w-full h-80 sm:h-88 md:h-96 rounded-lg overflow-hidden">
+                        <div className="relative w-full h-80 rounded-lg overflow-hidden">
                           <Image
                             src={imageUrl}
                             alt={alt}

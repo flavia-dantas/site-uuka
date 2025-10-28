@@ -16,7 +16,7 @@ export default function HeroSection({ items }: HeroSectionProps) {
 
   if (!items || items.length === 0) {
     return (
-      <section className="pt-[72px] h-screen w-full snap-start">
+      <section className="pt-[72px] w-full">
         <div className="h-[calc(100vh-72px)] w-full flex items-center justify-center">
           <p className="text-center py-20">Nenhuma imagem disponível</p>
         </div>
@@ -25,7 +25,7 @@ export default function HeroSection({ items }: HeroSectionProps) {
   }
 
   return (
-    <section id="inicio" className="pt-[72px] h-screen w-full snap-start">
+    <section id="inicio" className="pt-[72px] w-full">
       <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
         <Carousel
           opts={{

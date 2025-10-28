@@ -2,7 +2,7 @@
 
 export default function WhyThisProject() {
   return (
-    <section id="por-que" className="pt-[72px] h-screen w-full bg-white text-black snap-start">
+    <section id="por-que" className="pt-[72px] h-screen w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
         <div className="max-w-2xl">
           <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed">
