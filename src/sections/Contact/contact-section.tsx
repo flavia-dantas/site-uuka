@@ -14,7 +14,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
       id="contatos"
       className="pt-[72px] w-full bg-[#F59F23] text-black"
     >
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-8 gap-8 md:gap-4">
+      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-8 gap-8 md:gap-4">
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 flex-1 justify-center lg:justify-between items-center">
 

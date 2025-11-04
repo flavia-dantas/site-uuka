@@ -36,7 +36,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
       id="diretoria"
       className="pt-[72px] min-h-screen w-full bg-black text-white"
     >
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
+      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
         <div className="flex-1 flex items-center justify-center">
           <div className="w-full max-w-5xl relative overflow-visible">
             <Carousel
@@ -54,7 +54,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
               ]}
               className="w-full"
             >
-              <CarouselContent className="-ml-2 md:-ml-4 gap-1">
+              <CarouselContent className="-ml-2 md:-ml-4 gap-2 md:gap-4">
                 {leadership.LeadershipCard.map((member) => {
                   const imageUrl = `${process.env.NEXT_PUBLIC_URL}${member.photo.url}`;
                   const alt = member.photo.alternativeText || member.photo.name;
@@ -62,7 +62,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                   return (
                     <CarouselItem
                       key={member.id}
-                      className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4"
+                      className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%] md:basis-1/3 lg:basis-1/4"
                     >
                       <div
                         className="relative group cursor-pointer"
@@ -72,12 +72,12 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                         onKeyDown={(e) => handleKeyToggle(e, member.id)}
                         aria-pressed={tappedId === member.id}
                       >
-                        <div className="relative w-full h-80 sm:h-96 md:h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden">
+                        <div className="relative w-full h-80 sm:h-96 md:h-[24rem] rounded-lg overflow-hidden">
                           <Image
                             src={imageUrl}
                             alt={alt}
                             fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 33vw, 25vw"
                             quality={100}
                             className={cn(
                               "object-cover transition-all duration-700",
