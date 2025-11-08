@@ -9,7 +9,7 @@ type HeroSectionProps = {
   items: ImageHeroItem[];
 }
 
-export default function HeroSection({ items }: HeroSectionProps) {
+export function HeroSection({ items }: HeroSectionProps) {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   )

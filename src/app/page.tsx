@@ -1,8 +1,8 @@
 import { Footer } from "@/components/Footer/footer";
-import Header from "@/components/Header/header";
+import { Header } from "@/components/Header/header";
 import { AboutSection } from "@/sections/About/about-section";
 import { ContactSection } from "@/sections/Contact/contact-section";
-import HeroSection from "@/sections/Hero/hero-section";
+import { HeroSection } from "@/sections/Hero/hero-section";
 import { LeadershipSection } from "@/sections/Leadership/leadership-section";
 import { MissionVisionValuesSection } from "@/sections/MissionVisionValues/mission-vision-values-section";
 import { PartnershipsSection } from "@/sections/Partnerships/partnerships-section";
