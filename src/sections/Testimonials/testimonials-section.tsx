@@ -64,7 +64,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
                       </div>
 
                       <p className="text-black text-sm leading-relaxed flex-1">
-                        "{testimonial.description}"
+                        {testimonial.description}
                       </p>
                     </div>
                   </CarouselItem>
