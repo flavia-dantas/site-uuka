@@ -21,7 +21,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
           <div className="flex-1 flex flex-col justify-center">
             <div className="space-y-6">
               {contact?.ContactList.map((item) => {
-                const imageUrl = `${process.env.NEXT_PUBLIC_URL}${item?.icon?.url}`
+                const imageUrl = item?.icon?.url;
                 const alt = item.icon?.alternativeText || item.label;
 
                 return (

@@ -24,7 +24,7 @@ async function fetchLandingPage(): Promise<ApiResponse['data']> {
     'populate[Leadership][populate][LeadershipCard][populate]': 'photo',
   });
 
-  const url = `${process.env.STRAPI_URL}/api/landing-page?${params.toString()}`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/landing-page?${params.toString()}`;
 
   console.log('Fetching from:', url); // Debug
 

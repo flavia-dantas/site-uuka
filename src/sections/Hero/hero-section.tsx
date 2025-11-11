@@ -38,7 +38,7 @@ export function HeroSection({ items }: HeroSectionProps) {
           <CarouselContent className="h-[calc(100vh-72px)] -ml-0">
             {items.map((item) => {
               const image = item.image;
-              const imageUrl = `${process.env.NEXT_PUBLIC_URL}${image.url}`;
+              const imageUrl = item.image.url;
               const alt = image.alternativeText || image.name;
               const overlayText = item.overlayText;
 

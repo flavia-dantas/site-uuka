@@ -56,7 +56,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
             >
               <CarouselContent className="-ml-2 md:-ml-4 gap-2 md:gap-4">
                 {leadership.LeadershipCard.map((member) => {
-                  const imageUrl = `${process.env.NEXT_PUBLIC_URL}${member.photo.url}`;
+                  const imageUrl = member.photo.url;
                   const alt = member.photo.alternativeText || member.photo.name;
 
                   return (

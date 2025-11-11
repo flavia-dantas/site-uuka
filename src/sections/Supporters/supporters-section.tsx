@@ -43,7 +43,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
             >
               <CarouselContent>
                 {images.map((image) => {
-                  const imageUrl = `${process.env.NEXT_PUBLIC_URL}${image.url}`;
+                  const imageUrl = image.url;
                   const alt = image.alternativeText || image.name;
 
                   return (
