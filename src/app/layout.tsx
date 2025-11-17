@@ -1,6 +1,9 @@
+"use client";
+
 import { Instrument_Sans } from 'next/font/google';
 import "./globals.css";
 
+import { Toaster } from '@/components/ui/sonner';
 import { Open_Sans } from 'next/font/google';
 
 const openSans = Open_Sans({
@@ -26,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={openSans.className}>
         {children}
+        <Toaster richColors />
       </body>
     </html>
   );

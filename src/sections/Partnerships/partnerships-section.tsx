@@ -33,6 +33,7 @@ export function PartnershipsSection({ partnerships }: PartnershipsSectionProps) 
               <p className="text-sm sm:text-base md:text-lg font-medium text-black mb-4 sm:mb-6">
                 Você ou a sua empresa pode nos apoiar!
               </p>
+
               <Button
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"

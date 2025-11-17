@@ -12,11 +12,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Header as HeaderButton } from "@/types/strapi"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Button } from "../ui/button"
 
-export default function MobileMenu() {
+type MobileMenuProps = {
+  header: HeaderButton | null;
+}
+
+export default function MobileMenu({ header }: MobileMenuProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [somosOpen, setSomosOpen] = useState(false)
   const [metodologiaOpen, setMetodologiaOpen] = useState(false)
@@ -57,8 +62,8 @@ export default function MobileMenu() {
                   className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <a href="#somos" onClick={handleLinkClick} className="flex items-center justify-between w-full">
                     <span>Somos</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${somosOpen ? 'rotate-180' : ''}`} />
                   </a>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${somosOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-1 ml-4 space-y-1">
                   <a
@@ -105,8 +110,8 @@ export default function MobileMenu() {
                   className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <a href="#metodologia" onClick={handleLinkClick} className="flex items-center justify-between w-full">
                     <span>Metodologia</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${metodologiaOpen ? 'rotate-180' : ''}`} />
                   </a>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${metodologiaOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-1 ml-4 space-y-1">
                   <a
@@ -139,8 +144,8 @@ export default function MobileMenu() {
                   className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
                   <a href="#diretoria" onClick={handleLinkClick} className="flex items-center justify-between w-full">
                     <span>Diretoria</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${diretoriaOpen ? 'rotate-180' : ''}`} />
                   </a>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${diretoriaOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-1 ml-4 space-y-1">
                   <a
@@ -183,9 +188,14 @@ export default function MobileMenu() {
           {/* Menu Mobile */}
           <div className="p-4 border-t border-[#F59F23]/20">
             <Button
+              asChild
               className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
             >
-              Plataforma Mentorar
+              {header?.ButtonLink ? (
+                <a href={header?.ButtonLink} target="_blank" rel="noreferrer">{header?.ButtonLabel}</a>
+              ) : (
+                <span>{header?.ButtonLabel}</span>
+              )}
             </Button>
           </div>
         </div>
