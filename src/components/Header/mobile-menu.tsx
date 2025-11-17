@@ -18,7 +18,7 @@ import { useState } from "react"
 import { Button } from "../ui/button"
 
 type MobileMenuProps = {
-  header: HeaderButton;
+  header: HeaderButton | null;
 }
 
 export default function MobileMenu({ header }: MobileMenuProps) {
@@ -191,10 +191,10 @@ export default function MobileMenu({ header }: MobileMenuProps) {
               asChild
               className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
             >
-              {header.ButtonLink ? (
-                <a href={header.ButtonLink} target="_blank" rel="noreferrer">{header.ButtonLabel}</a>
+              {header?.ButtonLink ? (
+                <a href={header?.ButtonLink} target="_blank" rel="noreferrer">{header?.ButtonLabel}</a>
               ) : (
-                <span>{header.ButtonLabel}</span>
+                <span>{header?.ButtonLabel}</span>
               )}
             </Button>
           </div>

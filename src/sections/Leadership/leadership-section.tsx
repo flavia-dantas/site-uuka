@@ -10,11 +10,12 @@ import {
 import { cn } from "@/lib/utils";
 import { Leadership } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
+import { CircleX } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 type LeadershipSectionProps = {
-  leadership: Leadership;
+  leadership?: Leadership;
 };
 
 export function LeadershipSection({ leadership }: LeadershipSectionProps) {
@@ -29,6 +30,23 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
       e.preventDefault();
       toggleTapped(id);
     }
+  }
+
+  if (!leadership || leadership.LeadershipCard.length === 0) {
+    return (
+      <section id="depoimentos" className="pt-[72px] h-screen w-full bg-black text-white">
+        <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
+          <div className="flex-1 flex items-center justify-center gap-2">
+            <CircleX />
+            <p className="text-center text-white">Imagens indisponíveis no momento.</p>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23] lowercase">
+            diretoria
+          </h2>
+        </div>
+      </section>
+    );
   }
 
   return (

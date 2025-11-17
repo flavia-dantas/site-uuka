@@ -2,6 +2,7 @@
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ImageHeroItem } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
+import { CircleX } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -17,8 +18,9 @@ export function HeroSection({ items }: HeroSectionProps) {
   if (!items || items.length === 0) {
     return (
       <section className="pt-[72px] w-full">
-        <div className="h-[calc(100vh-72px)] w-full flex items-center justify-center">
-          <p className="text-center py-20">Nenhuma imagem disponível</p>
+        <div className="h-[calc(100vh-72px)] w-full flex items-center justify-center gap-2">
+          <CircleX />
+          <p className="text-center py-20">Imagem indisponível no momento.</p>
         </div>
       </section>
     );
@@ -56,7 +58,7 @@ export function HeroSection({ items }: HeroSectionProps) {
                     />
 
                     {overlayText && (
-                      <div className="absolute bottom-4 left-4 text-white p-4 rounded-lg max-w-md">
+                      <div className="absolute bottom-10 md:bottom-4 left-4 text-white p-4 rounded-lg max-w-md">
                         <h3 className="text-sm md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
                           {overlayText}
                         </h3>
