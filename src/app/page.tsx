@@ -15,10 +15,6 @@ import { ApiResponse } from '@/types/strapi';
 import { ErrorMessage } from '@/utils/error-message';
 import ScrollToTopButton from '@/utils/scroll-to-top-button';
 
-export const metadata = {
-  title: 'UUKA',
-};
-
 type LandingPageData = ApiResponse['data'] | null;
 
 async function fetchLandingPage(): Promise<LandingPageData> {
@@ -68,7 +64,7 @@ export default async function Home() {
     <div className="relative">
       <Header header={headerData} />
 
-      <main className="w-full overflow-y-scroll h-screen">
+      <main className="w-full overflow-y-scroll h-screen custom-scrollbar">
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />

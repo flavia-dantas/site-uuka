@@ -45,7 +45,7 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className="hidden md:flex fixed bottom-6 right-6 bg-black border-[3px] border-[#F59F23] p-3 rounded-full shadow z-50 hover:bg-[#1a1a1a] transition"
+      className="hidden md:flex fixed bottom-6 right-6 bg-black border-[3px] border-[#F59F23] p-3 rounded-full shadow z-50 hover:bg-[#1a1a1a] transition cursor-pointer"
       aria-label="Voltar ao topo"
     >
       <ArrowBigUp size={24} color="#F59F23" />
