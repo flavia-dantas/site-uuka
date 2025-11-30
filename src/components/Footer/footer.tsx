@@ -1,11 +1,11 @@
-import { Contact } from "@/types/strapi";
-import { ArrowBigRight, Mail } from "lucide-react";
-import Image from "next/image";
-import LogoUuka from "../../assets/images/logo-uuka.webp";
+import { Contact } from '@/types/strapi';
+import { ArrowBigRight, Mail } from 'lucide-react';
+import Image from 'next/image';
+import LogoUuka from '../../assets/images/logo-uuka.webp';
 
 type FooterProps = {
   contact: Contact;
-}
+};
 
 export function Footer({ contact }: FooterProps) {
   return (
@@ -24,7 +24,7 @@ export function Footer({ contact }: FooterProps) {
           <div className="flex flex-col gap-2 md:items-start md:text-left order-3 md:order-none">
             <p>©2015 UUKA. Todos os direitos reservados.</p>
             <p>
-              Desenvolvido por:{" "}
+              Desenvolvido por:{' '}
               <a
                 href="https://github.com/flavia-dantas"
                 target="_blank"

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Carousel,
@@ -6,13 +6,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
-import { Leadership } from "@/types/strapi";
-import Autoplay from "embla-carousel-autoplay";
-import { CircleX } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+} from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
+import { Leadership } from '@/types/strapi';
+import Autoplay from 'embla-carousel-autoplay';
+import { CircleX } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from 'react';
 
 type LeadershipSectionProps = {
   leadership?: Leadership;
@@ -26,7 +26,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
   }
 
   function handleKeyToggle(e: React.KeyboardEvent, id: number) {
-    if (e.key === "Enter" || e.key === " ") {
+    if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       toggleTapped(id);
     }
@@ -34,14 +34,19 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
 
   if (!leadership || leadership.LeadershipCard.length === 0) {
     return (
-      <section id="depoimentos" className="pt-[72px] h-screen w-full bg-black text-white">
+      <section
+        id="depoimentos"
+        className="pt-[72px] h-screen w-full bg-black text-white"
+      >
         <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
           <div className="flex-1 flex items-center justify-center gap-2">
             <CircleX />
-            <p className="text-center text-white">Imagens indisponíveis no momento.</p>
+            <p className="text-center text-white">
+              Imagens indisponíveis no momento.
+            </p>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23] lowercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] lowercase">
             diretoria
           </h2>
         </div>
@@ -59,7 +64,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
           <div className="w-full max-w-5xl relative overflow-visible">
             <Carousel
               opts={{
-                align: "start",
+                align: 'start',
                 loop: true,
                 dragFree: true,
               }}
@@ -98,10 +103,10 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                             sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 33vw, 25vw"
                             quality={100}
                             className={cn(
-                              "object-cover transition-all duration-700",
-                              (member.isColor || tappedId === member.id)
-                                ? "grayscale-0"
-                                : "grayscale group-hover:grayscale-0"
+                              'object-cover transition-all duration-700',
+                              member.isColor || tappedId === member.id
+                                ? 'grayscale-0'
+                                : 'grayscale group-hover:grayscale-0'
                             )}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
@@ -127,7 +132,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23] lowercase">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] lowercase">
           diretoria
         </h2>
       </div>

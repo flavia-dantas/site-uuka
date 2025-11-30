@@ -1,71 +1,103 @@
-'use client'
+'use client';
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from '@/components/ui/collapsible';
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
-import { Header as HeaderButton } from "@/types/strapi"
-import { ChevronDown, Menu, X } from "lucide-react"
-import { useState } from "react"
-import { Button } from "../ui/button"
+} from '@/components/ui/sheet';
+import { Header as HeaderButton } from '@/types/strapi';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '../ui/button';
 
 type MobileMenuProps = {
   header: HeaderButton | null;
-}
+};
 
 export default function MobileMenu({ header }: MobileMenuProps) {
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [somosOpen, setSomosOpen] = useState(false)
-  const [metodologiaOpen, setMetodologiaOpen] = useState(false)
-  const [diretoriaOpen, setDiretoriaOpen] = useState(false)
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isMethodologyOpen, setIsMethodologyOpen] = useState(false);
+  const [isLeadershipOpen, setIsLeadershipOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setMobileOpen(false)
-  }
+    setIsMobileOpen(false);
+  };
 
   return (
-    <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-      <SheetTrigger className="lg:hidden hover:bg-[#F59F23]/10 p-2 rounded-lg transition-colors">
-        <Menu className="text-[#F59F23] w-6 h-6" />
+    <Sheet open={isMobileOpen} onOpenChange={setIsMobileOpen}>
+      {/* Botão de abrir menu */}
+      <SheetTrigger
+        aria-label="Abrir o menu de navegação"
+        className="lg:hidden hover:bg-[#F59F23]/10 p-2 rounded-lg transition-colors cursor-pointer"
+      >
+        <Menu className="text-[#F59F23] w-6 h-6" aria-hidden="true" />
       </SheetTrigger>
-      <SheetContent side="left" className="bg-black border-r-2 border-[#F59F23]/20 w-screen h-screen p-0">
+
+      <SheetContent
+        side="left"
+        className="bg-black border-r-2 border-[#F59F23]/20 w-screen h-screen p-0"
+      >
         <div className="flex flex-col h-full">
           {/* Header do Menu Mobile com botão de fechar */}
           <div className="p-6 border-b border-[#F59F23]/20 flex items-center justify-between">
-            <SheetTitle className="text-xl font-bold text-[#F59F23]">EI, UUKAS!</SheetTitle>
+            <SheetTitle className="text-xl font-bold text-[#F59F23]">
+              EI, UUKAS!
+            </SheetTitle>
+
             <SheetDescription className="sr-only">
-              Menu de Navegação
+              Menu de navegação
             </SheetDescription>
 
             <Button
-              onClick={() => setMobileOpen(false)}
-              className="hover:bg-[#F59F23]/10 p-2 rounded-lg transition-colors"
+              onClick={() => setIsMobileOpen(false)}
+              aria-label="Fechar o menu de navegação"
+              className="hover:bg-[#F59F23]/10 p-2 rounded-lg transition-colors cursor-pointer"
             >
-              <X className="text-[#F59F23] w-5 h-5" />
+              <X className="text-[#F59F23] w-5 h-5" aria-hidden="true" />
             </Button>
           </div>
 
           {/* Links do Menu Mobile */}
-          <nav className="flex-1 overflow-y-auto p-4">
+          <nav className="flex-1 overflow-y-auto p-4 custom-scrollbar">
             <div className="space-y-2">
               {/* Somos */}
-              <Collapsible open={somosOpen} onOpenChange={setSomosOpen}>
+              <Collapsible open={isAboutOpen} onOpenChange={setIsAboutOpen}>
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
-                  <a href="#somos" onClick={handleLinkClick} className="flex items-center justify-between w-full">
-                    <span>Somos</span>
-                  </a>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${somosOpen ? 'rotate-180' : ''}`} />
+                  aria-expanded={isAboutOpen}
+                  aria-controls="secao-somos"
+                  aria-label="Alternar seção Somos"
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] 
+                    hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold cursor-pointer"
+                >
+                  <span>
+                    <a
+                      href="#somos"
+                      onClick={handleLinkClick}
+                      className="flex items-center justify-between w-full"
+                    >
+                      Somos
+                    </a>
+                  </span>
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isAboutOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </CollapsibleTrigger>
-                <CollapsibleContent className="mt-1 ml-4 space-y-1">
+
+                <CollapsibleContent
+                  id="secao-somos"
+                  className="mt-1 ml-4 space-y-1"
+                >
                   <a
                     href="#publico-alvo"
                     onClick={handleLinkClick}
@@ -105,15 +137,38 @@ export default function MobileMenu({ header }: MobileMenuProps) {
               </Collapsible>
 
               {/* Metodologia */}
-              <Collapsible open={metodologiaOpen} onOpenChange={setMetodologiaOpen}>
+              <Collapsible
+                open={isMethodologyOpen}
+                onOpenChange={setIsMethodologyOpen}
+              >
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
-                  <a href="#metodologia" onClick={handleLinkClick} className="flex items-center justify-between w-full">
-                    <span>Metodologia</span>
-                  </a>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${metodologiaOpen ? 'rotate-180' : ''}`} />
+                  aria-expanded={isMethodologyOpen}
+                  aria-controls="secao-metodologia"
+                  aria-label="Alternar seção Metodologia"
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] 
+                    hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold cursor-pointer"
+                >
+                  <span>
+                    <a
+                      href="#metodologia"
+                      onClick={handleLinkClick}
+                      className="flex items-center justify-between w-full"
+                    >
+                      Metodologia
+                    </a>
+                  </span>
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isMethodologyOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </CollapsibleTrigger>
-                <CollapsibleContent className="mt-1 ml-4 space-y-1">
+
+                <CollapsibleContent
+                  id="secao-metodologia"
+                  className="mt-1 ml-4 space-y-1"
+                >
                   <a
                     href="#cronograma"
                     onClick={handleLinkClick}
@@ -139,15 +194,38 @@ export default function MobileMenu({ header }: MobileMenuProps) {
               </Collapsible>
 
               {/* Diretoria */}
-              <Collapsible open={diretoriaOpen} onOpenChange={setDiretoriaOpen}>
+              <Collapsible
+                open={isLeadershipOpen}
+                onOpenChange={setIsLeadershipOpen}
+              >
                 <CollapsibleTrigger
-                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold">
-                  <a href="#diretoria" onClick={handleLinkClick} className="flex items-center justify-between w-full">
-                    <span>Diretoria</span>
-                  </a>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${diretoriaOpen ? 'rotate-180' : ''}`} />
+                  aria-expanded={isLeadershipOpen}
+                  aria-controls="secao-diretoria"
+                  aria-label="Alternar seção Diretoria"
+                  className="flex items-center justify-between w-full px-4 py-3 text-[#F59F23] 
+                    hover:bg-black hover:text-[#F9c57b] rounded-lg transition-colors font-bold cursor-pointer"
+                >
+                  <span>
+                    <a
+                      href="#diretoria"
+                      onClick={handleLinkClick}
+                      className="flex items-center justify-between w-full"
+                    >
+                      Diretoria
+                    </a>
+                  </span>
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isLeadershipOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </CollapsibleTrigger>
-                <CollapsibleContent className="mt-1 ml-4 space-y-1">
+
+                <CollapsibleContent
+                  id="secao-diretoria"
+                  className="mt-1 ml-4 space-y-1"
+                >
                   <a
                     href="#parcerias"
                     onClick={handleLinkClick}
@@ -192,7 +270,9 @@ export default function MobileMenu({ header }: MobileMenuProps) {
               className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
             >
               {header?.ButtonLink ? (
-                <a href={header?.ButtonLink} target="_blank" rel="noreferrer">{header?.ButtonLabel}</a>
+                <a href={header?.ButtonLink} target="_blank" rel="noreferrer">
+                  {header?.ButtonLabel}
+                </a>
               ) : (
                 <span>{header?.ButtonLabel}</span>
               )}
@@ -201,5 +281,5 @@ export default function MobileMenu({ header }: MobileMenuProps) {
         </div>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

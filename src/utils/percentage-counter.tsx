@@ -29,7 +29,7 @@ export default function PercentageCounter({
         }
       },
       {
-        threshold: 0.5
+        threshold: 0.5,
       }
     );
 
@@ -67,7 +67,8 @@ export default function PercentageCounter({
 
   return (
     <span ref={elementRef} className={className}>
-      {Math.round(count)}{suffix}
+      {Math.round(count)}
+      {suffix}
     </span>
   );
 }
