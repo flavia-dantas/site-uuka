@@ -18,7 +18,7 @@ export function PartnershipsSection({
       <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-14 gap-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
           <div className="flex-1 lg:flex-2">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+            <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl mb-2">
               A UUKA é uma associação sem fins lucrativos que aplica mentorias
               gratuitas para a carreira de pessoas negras e indígenas. Fundada
               em 2020, promove o protagonismo profissional com base na escuta
@@ -40,8 +40,8 @@ export function PartnershipsSection({
           </div>
 
           <div className="w-full lg:flex-1 flex items-center justify-center">
-            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl text-center flex flex-col justify-center gap-4">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-black mb-4 sm:mb-6">
+            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl md:min-h-96 text-center flex flex-col justify-between">
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black mb-4 sm:mb-6">
                 Você ou a sua empresa pode nos apoiar!
               </p>
 
@@ -65,7 +65,7 @@ export function PartnershipsSection({
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black mt-6 lg:mt-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-black mt-6 lg:mt-2">
           parcerias
         </h2>
       </div>

@@ -46,7 +46,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
             </p>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23] lowercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] lowercase">
             diretoria
           </h2>
         </div>
@@ -132,7 +132,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23] lowercase">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] lowercase">
           diretoria
         </h2>
       </div>

@@ -8,41 +8,42 @@ export function ValuesSection() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mb-8">
             <div className="space-y-4 md:space-y-12">
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-black mb-2">
                   Inconformismo
                 </h3>
-                <p className="text-sm md:text-base text-black">
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black">
                   Questionamos padrões.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-black mb-2 md:mt-20">
                   Coletividade
                 </h3>
-                <p className="text-sm md:text-base text-black">
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black">
                   Acreditamo no poder da comunidade e incentivamos os avanços
                   coletivos.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-black mb-2">
                   Equidade
                 </h3>
-                <p className="text-sm md:text-base text-black">
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black">
                   Reconhecemos a existência do racismo estrutural e trabalhamos
                   ativamente para reduzir desigualdades que derivam dele.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-black mb-2">
                   Protagonismo
                 </h3>
-                <p className="text-sm md:text-base text-black">
+
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black">
                   Buscamos colocar pessoas negras em posições de destaque.
                 </p>
               </div>
@@ -50,7 +51,7 @@ export function ValuesSection() {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23]">
           valores
         </h2>
       </div>

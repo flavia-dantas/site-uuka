@@ -8,7 +8,7 @@ export default function WhyThisProject() {
     >
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
         <div className="max-w-2xl">
-          <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl mb-4">
             Em Dezembro de 2020, decidimos que nosso nome precisaria traduzir o
             grande sonho, que contasse o porquê de nos juntarmos e pra onde
             queríamos ir. Depois de algumas pesquisas, compreensão histórica e
@@ -20,7 +20,7 @@ export default function WhyThisProject() {
           </p>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23]">
           por que?
         </h2>
       </div>

@@ -22,7 +22,7 @@ export function HeroSection({ items }: HeroSectionProps) {
   if (!items || items.length === 0) {
     return (
       <section className="pt-[72px] w-full">
-        <div className="h-[calc(100vh-72px)] w-full flex items-center justify-center gap-2">
+        <div className="min-h-screen w-full flex items-center justify-center gap-2">
           <CircleX />
           <p className="text-center py-20">Imagem indisponível no momento.</p>
         </div>
@@ -32,16 +32,16 @@ export function HeroSection({ items }: HeroSectionProps) {
 
   return (
     <section id="inicio" className="pt-[72px] w-full">
-      <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
+      <div className="min-h-screen w-full overflow-hidden">
         <Carousel
           opts={{
             align: 'start',
             loop: true,
           }}
           plugins={[plugin.current]}
-          className="w-full h-[calc(100vh-72px)]"
+          className="w-full min-h-screen"
         >
-          <CarouselContent className="h-[calc(100vh-72px)] -ml-0">
+          <CarouselContent className="min-h-screen -ml-0">
             {items.map((item) => {
               const image = item.image;
               const imageUrl = item.image.url;
@@ -49,23 +49,20 @@ export function HeroSection({ items }: HeroSectionProps) {
               const overlayText = item.overlayText;
 
               return (
-                <CarouselItem
-                  key={item.id}
-                  className="pl-0 h-[calc(100vh-72px)]"
-                >
-                  <div className="relative h-[calc(100vh-72px)] w-full">
+                <CarouselItem key={item.id} className="pl-0">
+                  <div className="relative w-full min-h-screen">
                     <Image
                       src={imageUrl}
                       alt={alt}
                       width={image.width}
                       height={image.height}
                       priority={item.id === items[0].id}
-                      className="w-full h-[calc(100vh-72px)] object-cover"
-                      style={{ objectPosition: 'center' }}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: 'top' }}
                     />
 
                     {overlayText && (
-                      <div className="absolute bottom-10 md:bottom-4 left-4 text-white p-4 rounded-lg max-w-md">
+                      <div className="absolute bottom-10 md:bottom-4 left-12 text-white p-4 rounded-lg max-w-md">
                         <h3 className="text-sm md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
                           {overlayText}
                         </h3>

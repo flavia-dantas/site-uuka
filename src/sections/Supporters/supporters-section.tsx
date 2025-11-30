@@ -32,7 +32,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
               Nenhuma imagem de parceiro disponível no momento.
             </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23]">
             apoiadores
           </h2>
         </div>
@@ -91,7 +91,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23]">
           apoiadores
         </h2>
       </div>

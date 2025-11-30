@@ -5,7 +5,7 @@ export function ScheduleSection() {
     <section id="cronograma" className="h-screen w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-20">
         <div className="flex justify-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black pt-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black pt-6">
             Ciclo 8
           </h1>
         </div>
@@ -42,7 +42,7 @@ export function ScheduleSection() {
         </div>
 
         <div className="flex justify-start">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[#F59F23]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23]">
             cronograma
           </h2>
         </div>

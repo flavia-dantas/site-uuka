@@ -44,9 +44,10 @@ export function ContactSection({ contact }: ContactSectionProps) {
 
           <div className="w-full lg:flex-1 flex items-center justify-center lg:justify-end">
             <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl text-center flex flex-col justify-center gap-y-6">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-black">
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium text-black">
                 Quero fazer parte como voluntário!
               </p>
+
               <Button
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
@@ -63,7 +64,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black mt-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-black mt-10">
           contatos
         </h2>
       </div>
