@@ -15,24 +15,26 @@ export default function DesktopMenu() {
       <NavigationMenuList className="gap-6">
         {/* somos */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger 
-          className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
-          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
+          <NavigationMenuTrigger
+            className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
+          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold"
+          >
             <a
               href="#somos"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold"
+              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
             >
               Somos
             </a>
           </NavigationMenuTrigger>
 
-          <NavigationMenuContent 
-          className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
-          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none">
+          <NavigationMenuContent
+            className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
+          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none"
+          >
             <NavigationMenuLink asChild>
               <a
                 href="#publico-alvo"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Público-alvo
               </a>
@@ -41,7 +43,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#por-que"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Por que?
               </a>
@@ -50,7 +52,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#missao"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Missão
               </a>
@@ -59,7 +61,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#visao"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Visão
               </a>
@@ -68,35 +70,36 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#valores"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Valores
               </a>
             </NavigationMenuLink>
-
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         {/* metodologia */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger 
-          className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
-          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
+          <NavigationMenuTrigger
+            className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
+          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold"
+          >
             <a
               href="#metodologia"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold"
+              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
             >
               Metodologia
             </a>
           </NavigationMenuTrigger>
 
-          <NavigationMenuContent 
-          className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
-          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none">
+          <NavigationMenuContent
+            className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
+          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none"
+          >
             <NavigationMenuLink asChild>
               <a
                 href="#cronograma"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Cronograma
               </a>
@@ -105,7 +108,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#lideranca"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Liderança e Autoconhecimento
               </a>
@@ -114,7 +117,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#ciclo-virtuoso"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Ciclo Virtuoso
               </a>
@@ -124,24 +127,26 @@ export default function DesktopMenu() {
 
         {/* diretoria */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger 
-          className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
-          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
+          <NavigationMenuTrigger
+            className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] 
+          data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold"
+          >
             <a
               href="#diretoria"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold"
+              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
             >
               Diretoria
             </a>
           </NavigationMenuTrigger>
 
-          <NavigationMenuContent 
-          className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
-          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none">
+          <NavigationMenuContent
+            className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] 
+          [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none"
+          >
             <NavigationMenuLink asChild>
               <a
                 href="#parcerias"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Parcerias
               </a>
@@ -149,7 +154,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#apoiadores"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >
                 Apoiadores
               </a>
@@ -162,7 +167,7 @@ export default function DesktopMenu() {
           <NavigationMenuLink asChild>
             <a
               href="#depoimentos"
-              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm font-bold"
+              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
             >
               Depoimentos
             </a>
@@ -174,7 +179,7 @@ export default function DesktopMenu() {
           <NavigationMenuLink asChild>
             <a
               href="#contatos"
-              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm font-bold"
+              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
             >
               Contatos
             </a>

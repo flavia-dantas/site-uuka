@@ -8,7 +8,7 @@ export function MethodologySection() {
       id="metodologia"
       className="h-screen w-full bg-[#F59F23] text-black"
     >
-      <div className="w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-16">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-16">
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-sm md:max-w-md flex flex-col items-center text-center gap-4">
             <div className="gap-2">

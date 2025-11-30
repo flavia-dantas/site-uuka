@@ -18,49 +18,39 @@ body {
 */
 
 .custom-scrollbar {
-  /* Hide scrollbar by default
-     - Firefox: `scrollbar-width: none` hides it
-     - Chromium: we'll set ::-webkit-scrollbar width to 0
-     Keep track transparent by default (shows underlying background)
+  /* Show scrollbar by default
+     - Firefox: use thin scrollbar and set thumb color
+     - WebKit: width/height defined in ::-webkit-scrollbar
   */
-  scrollbar-width: none; /* Firefox */
-  scrollbar-color: transparent transparent; /* Firefox: thumb + track transparent */
+  scrollbar-width: thin; /* Firefox: "auto" | "thin" | "none" */
+  scrollbar-color: #9CA3AF transparent; /* thumb + track */
 }
 
-/* WebKit-based browsers: hide scrollbar by setting width 0 */
+/* WebKit-based browsers: show and style scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 10px;
+  height: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* invisible thumb by default */
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background-color: #9CA3AF; /* gray thumb */
   border-radius: 9999px;
   border: 3px solid transparent;
 }
 
-/* Show scrollbar when user hovers the scrollable area */
-.custom-scrollbar:hover {
-  /* Firefox: show thin scrollbar and set thumb color */
-  scrollbar-width: thin;
-  scrollbar-color: #9CA3AF transparent; /* thumb gray, track transparent */
-}
-
-.custom-scrollbar:hover::-webkit-scrollbar {
-  width: 10px;
-}
-
+/* Hover: slightly darker thumb (also applies when hovering the scrollable area) */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
-  background-color: #9CA3AF; /* gray thumb */
-  border: 3px solid transparent;
-}
-
-/* Hover effect for thumb (slightly darker) */
-.custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
   background-color: #6B7280;
 }
+
+/* Optional: if you want the scrollbar to widen on hover, uncomment below
+.custom-scrollbar:hover::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* End of custom-scrollbar rules */
