@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 html {
   scroll-behavior: smooth;
@@ -23,7 +23,7 @@ body {
      - WebKit: width/height defined in ::-webkit-scrollbar
   */
   scrollbar-width: thin; /* Firefox: "auto" | "thin" | "none" */
-  scrollbar-color: #9CA3AF transparent; /* thumb + track */
+  scrollbar-color: #9ca3af transparent; /* thumb + track */
 }
 
 /* WebKit-based browsers: show and style scrollbar */
@@ -37,7 +37,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #9CA3AF; /* gray thumb */
+  background-color: #9ca3af; /* gray thumb */
   border-radius: 9999px;
   border: 3px solid transparent;
 }
@@ -45,7 +45,7 @@ body {
 /* Hover: slightly darker thumb (also applies when hovering the scrollable area) */
 .custom-scrollbar::-webkit-scrollbar-thumb:hover,
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
-  background-color: #6B7280;
+  background-color: #6b7280;
 }
 
 /* Optional: if you want the scrollbar to widen on hover, uncomment below

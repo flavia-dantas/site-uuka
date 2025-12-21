@@ -1,39 +1,39 @@
-import { Footer } from '@/components/Footer/footer';
-import { Header } from '@/components/Header/header';
-import { strapiFetch } from '@/connection/api';
-import { AboutSection } from '@/sections/About/about-section';
-import { ContactSection } from '@/sections/Contact/contact-section';
-import { HeroSection } from '@/sections/Hero/hero-section';
-import { LeadershipSection } from '@/sections/Leadership/leadership-section';
-import { MissionVisionValuesSection } from '@/sections/MissionVisionValues/mission-vision-values-section';
-import { PartnershipsSection } from '@/sections/Partnerships/partnerships-section';
-import { ScheduleMethodologySection } from '@/sections/ScheduleMethodology/schedule-methodology-section';
-import { SupportersSection } from '@/sections/Supporters/supporters-section';
-import { TestimonialsSection } from '@/sections/Testimonials/testimonials-section';
-import { VirtuousCycleLeadershipSection } from '@/sections/VirtuousCycleLeadership/virtuous-cycle-leadership-section';
-import { ApiResponse } from '@/types/strapi';
-import { ErrorMessage } from '@/utils/error-message';
-import ScrollToTopButton from '@/utils/scroll-to-top-button';
+import { Footer } from "@/components/Footer/footer";
+import { Header } from "@/components/Header/header";
+import { strapiFetch } from "@/connection/api";
+import { AboutSection } from "@/sections/About/about-section";
+import { ContactSection } from "@/sections/Contact/contact-section";
+import { HeroSection } from "@/sections/Hero/hero-section";
+import { LeadershipSection } from "@/sections/Leadership/leadership-section";
+import { MissionVisionValuesSection } from "@/sections/MissionVisionValues/mission-vision-values-section";
+import { PartnershipsSection } from "@/sections/Partnerships/partnerships-section";
+import { ScheduleMethodologySection } from "@/sections/ScheduleMethodology/schedule-methodology-section";
+import { SupportersSection } from "@/sections/Supporters/supporters-section";
+import { TestimonialsSection } from "@/sections/Testimonials/testimonials-section";
+import { VirtuousCycleLeadershipSection } from "@/sections/VirtuousCycleLeadership/virtuous-cycle-leadership-section";
+import { ApiResponse } from "@/types/strapi";
+import { ErrorMessage } from "@/utils/error-message";
+import ScrollToTopButton from "@/utils/scroll-to-top-button";
 
-type LandingPageData = ApiResponse['data'] | null;
+type LandingPageData = ApiResponse["data"] | null;
 
 async function fetchLandingPage(): Promise<LandingPageData> {
   const params = new URLSearchParams({
-    'populate[Header]': '*',
-    'populate[About][populate][imageHero][populate]': 'image',
-    'populate[About][populate][MissionVisionValues][populate]': 'image',
-    'populate[Testimonials][populate]': '*',
-    'populate[Supporters][populate]': '*',
-    'populate[Contact][populate][ContactList][populate]': 'icon',
-    'populate[Partnerships]': '*',
-    'populate[Leadership][populate][LeadershipCard][populate]': 'photo',
+    "populate[Header]": "*",
+    "populate[About][populate][imageHero][populate]": "image",
+    "populate[About][populate][MissionVisionValues][populate]": "image",
+    "populate[Testimonials][populate]": "*",
+    "populate[Supporters][populate]": "*",
+    "populate[Contact][populate][ContactList][populate]": "icon",
+    "populate[Partnerships]": "*",
+    "populate[Leadership][populate][LeadershipCard][populate]": "photo",
   });
 
   try {
-    const data = await strapiFetch<ApiResponse>('landing-page', params);
+    const data = await strapiFetch<ApiResponse>("landing-page", params);
     return data?.data ?? null;
   } catch (error) {
-    console.error('Erro ao buscar dados da API:', error);
+    console.error("Erro ao buscar dados da API:", error);
     return null;
   }
 }

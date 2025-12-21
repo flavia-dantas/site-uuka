@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+} from "@/components/ui/collapsible";
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
-import { Header as HeaderButton } from '@/types/strapi';
-import { ChevronDown, Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Button } from '../ui/button';
+} from "@/components/ui/sheet";
+import { Header as HeaderButton } from "@/types/strapi";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 type MobileMenuProps = {
   header: HeaderButton | null;
@@ -89,7 +89,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   <ChevronDown
                     aria-hidden="true"
                     className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isAboutOpen ? 'rotate-180' : ''
+                      isAboutOpen ? "rotate-180" : ""
                     }`}
                   />
                 </CollapsibleTrigger>
@@ -160,7 +160,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   <ChevronDown
                     aria-hidden="true"
                     className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isMethodologyOpen ? 'rotate-180' : ''
+                      isMethodologyOpen ? "rotate-180" : ""
                     }`}
                   />
                 </CollapsibleTrigger>
@@ -217,7 +217,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   <ChevronDown
                     aria-hidden="true"
                     className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isLeadershipOpen ? 'rotate-180' : ''
+                      isLeadershipOpen ? "rotate-180" : ""
                     }`}
                   />
                 </CollapsibleTrigger>

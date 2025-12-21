@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Carousel,
@@ -6,13 +6,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
-import { Leadership } from '@/types/strapi';
-import Autoplay from 'embla-carousel-autoplay';
-import { CircleX } from 'lucide-react';
-import Image from 'next/image';
-import { useState } from 'react';
+} from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
+import { Leadership } from "@/types/strapi";
+import Autoplay from "embla-carousel-autoplay";
+import { CircleX } from "lucide-react";
+import Image from "next/image";
+import React, { useState } from "react";
 
 type LeadershipSectionProps = {
   leadership?: Leadership;
@@ -26,11 +26,21 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
   }
 
   function handleKeyToggle(e: React.KeyboardEvent, id: number) {
-    if (e.key === 'Enter' || e.key === ' ') {
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       toggleTapped(id);
     }
   }
+
+  const plugin = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 2000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    []
+  );
 
   if (!leadership || leadership.LeadershipCard.length === 0) {
     return (
@@ -64,17 +74,11 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
           <div className="w-full max-w-5xl relative overflow-visible">
             <Carousel
               opts={{
-                align: 'start',
+                align: "start",
                 loop: true,
                 dragFree: true,
               }}
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
+              plugins={[plugin]}
               className="w-full"
             >
               <CarouselContent className="-ml-2 md:-ml-4 gap-2 md:gap-4">
@@ -103,10 +107,10 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                             sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 33vw, 25vw"
                             quality={100}
                             className={cn(
-                              'object-cover transition-all duration-700',
+                              "object-cover transition-all duration-700",
                               member.isColor || tappedId === member.id
-                                ? 'grayscale-0'
-                                : 'grayscale group-hover:grayscale-0'
+                                ? "grayscale-0"
+                                : "grayscale group-hover:grayscale-0"
                             )}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />

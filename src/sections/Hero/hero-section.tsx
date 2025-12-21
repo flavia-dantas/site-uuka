@@ -1,22 +1,23 @@
-'use client';
+"use client";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
-import { ImageHeroItem } from '@/types/strapi';
-import Autoplay from 'embla-carousel-autoplay';
-import { CircleX } from 'lucide-react';
-import Image from 'next/image';
-import React from 'react';
+} from "@/components/ui/carousel";
+import { ImageHeroItem } from "@/types/strapi";
+import Autoplay from "embla-carousel-autoplay";
+import { CircleX } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 type HeroSectionProps = {
   items: ImageHeroItem[];
 };
 
 export function HeroSection({ items }: HeroSectionProps) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+  const plugin = React.useMemo(
+    () => Autoplay({ delay: 4000, stopOnInteraction: true }),
+    []
   );
 
   if (!items || items.length === 0 || items[0].image === null) {
@@ -34,15 +35,15 @@ export function HeroSection({ items }: HeroSectionProps) {
     <section id="inicio" className="pt-[72px] w-full">
       <div className="relative w-full">
         <Carousel
-          opts={{ align: 'start', loop: true }}
-          plugins={[plugin.current]}
+          opts={{ align: "start", loop: true }}
+          plugins={[plugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-0">
             {items.map((item) => {
               const image = item.image;
-              const imageUrl = image?.url ?? '';
-              const alt = image?.alternativeText || image?.name || 'Imagem';
+              const imageUrl = image?.url ?? "";
+              const alt = image?.alternativeText || image?.name || "Imagem";
               const overlayText = item.overlayText;
 
               return (
@@ -55,7 +56,7 @@ export function HeroSection({ items }: HeroSectionProps) {
                       height={image.height}
                       priority={item.id === items[0].id}
                       className="w-full h-auto object-cover"
-                      style={{ objectPosition: 'top' }}
+                      style={{ objectPosition: "top" }}
                     />
 
                     {overlayText && (

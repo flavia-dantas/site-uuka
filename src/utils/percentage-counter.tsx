@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { useEffect, useRef, useState } from "react";
 
 type PercentageCounterProps = {
   to: number;
@@ -11,8 +11,8 @@ type PercentageCounterProps = {
 export default function PercentageCounter({
   to,
   duration = 2,
-  suffix = '%',
-  className = '',
+  suffix = "%",
+  className = "",
 }: PercentageCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -33,13 +33,14 @@ export default function PercentageCounter({
       }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const el = elementRef.current;
+    if (el) {
+      observer.observe(el);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (el) {
+        observer.unobserve(el);
       }
     };
   }, []);

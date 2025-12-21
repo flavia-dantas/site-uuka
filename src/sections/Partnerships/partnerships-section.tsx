@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Partnerships } from '@/types/strapi';
+import { Button } from "@/components/ui/button";
+import { Partnerships } from "@/types/strapi";
 
 type PartnershipsSectionProps = {
   partnerships: Partnerships;

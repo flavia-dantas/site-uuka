@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { ArrowBigUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ArrowBigUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
-    const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
+    const main = document.querySelector("main");
+    const footer = document.querySelector("footer");
 
     if (!main || !footer) return;
 
@@ -25,18 +25,18 @@ export default function ScrollToTopButton() {
     );
 
     observer.observe(footer);
-    main.addEventListener('scroll', handleScroll);
+    main.addEventListener("scroll", handleScroll);
 
     return () => {
       observer.disconnect();
-      main.removeEventListener('scroll', handleScroll);
+      main.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    const main = document.querySelector('main');
+    const main = document.querySelector("main");
     if (main) {
-      main.scrollTo({ top: 0, behavior: 'smooth' });
+      main.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

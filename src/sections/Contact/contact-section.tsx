@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { Contact } from '@/types/strapi';
-import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import { Contact } from "@/types/strapi";
+import Image from "next/image";
 
 type ContactSectionProps = {
   contact: Contact;

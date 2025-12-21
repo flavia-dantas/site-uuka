@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Carousel,
@@ -6,9 +6,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Testimonials } from '@/types/strapi';
-import { CircleX, Star } from 'lucide-react';
+} from "@/components/ui/carousel";
+import { Testimonials } from "@/types/strapi";
+import { CircleX, Star } from "lucide-react";
 
 type TestimonialsSectionProps = {
   testimonials?: Testimonials;
@@ -50,7 +50,7 @@ export function TestimonialsSection({
           <div className="w-full max-w-6xl relative">
             <Carousel
               opts={{
-                align: 'start',
+                align: "start",
                 loop: true,
               }}
               className="w-full"
@@ -68,8 +68,8 @@ export function TestimonialsSection({
                             key={index}
                             className={`w-5 h-5 ${
                               index < testimonial.rating
-                                ? 'fill-black text-black'
-                                : 'fill-[#f9c57b] text-black'
+                                ? "fill-black text-black"
+                                : "fill-[#f9c57b] text-black"
                             }`}
                           />
                         ))}
@@ -81,9 +81,9 @@ export function TestimonialsSection({
                         </h3>
 
                         <p className="text-gray-600 text-sm md:text-base lg:text-lg">
-                          {testimonial.role === 'Mentee'
-                            ? 'Mentorado'
-                            : 'Mentor'}
+                          {testimonial.role === "Mentee"
+                            ? "Mentorado"
+                            : "Mentor"}
                         </p>
                       </div>
 

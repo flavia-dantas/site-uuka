@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   NavigationMenu,
@@ -7,7 +7,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+} from "@/components/ui/navigation-menu";
 
 export default function DesktopMenu() {
   return (

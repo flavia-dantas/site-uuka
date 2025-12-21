@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { CircleX } from 'lucide-react';
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CircleX } from "lucide-react";
 
 export function ErrorMessage({
   message,

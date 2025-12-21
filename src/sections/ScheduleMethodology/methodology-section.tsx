@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import PercentageCounter from '@/utils/percentage-counter';
+import PercentageCounter from "@/utils/percentage-counter";
 
 export function MethodologySection() {
   return (

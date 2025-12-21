@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Header as HeaderButton } from '@/types/strapi';
-import { Button } from '../ui/button';
-import DesktopMenu from './desktop-menu';
-import MobileMenu from './mobile-menu';
+import { Header as HeaderButton } from "@/types/strapi";
+import { Button } from "../ui/button";
+import DesktopMenu from "./desktop-menu";
+import MobileMenu from "./mobile-menu";
 
 type HeaderProps = {
   header: HeaderButton | null;
