@@ -6,12 +6,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import type { About } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useMemo, useState } from "react";
 import { MethodologySection } from "./methodology-section";
 import { ScheduleSection } from "./schedule-section";
 
-export function ScheduleMethodologySection() {
+type Props = {
+  about: About;
+};
+
+export function ScheduleMethodologySection({ about }: Props) {
   const plugin = useMemo(
     () => Autoplay({ delay: 5000, stopOnInteraction: true }),
     []
@@ -63,7 +68,7 @@ export function ScheduleMethodologySection() {
         >
           <CarouselContent className="-ml-0">
             <CarouselItem className="pl-0">
-              <ScheduleSection />
+              <ScheduleSection about={about} />
             </CarouselItem>
             <CarouselItem className="pl-0">
               <MethodologySection />

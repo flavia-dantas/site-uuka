@@ -22,6 +22,7 @@ async function fetchLandingPage(): Promise<LandingPageData> {
     "populate[Header]": "*",
     "populate[About][populate][imageHero][populate]": "image",
     "populate[About][populate][MissionVisionValues][populate]": "image",
+    "populate[About][populate][Schedule]": "*",
     "populate[Testimonials][populate]": "*",
     "populate[Supporters][populate]": "*",
     "populate[Contact][populate][ContactList][populate]": "icon",
@@ -68,7 +69,7 @@ export default async function Home() {
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />
-        <ScheduleMethodologySection />
+        <ScheduleMethodologySection about={landingPage.About} />
         <VirtuousCycleLeadershipSection />
         <LeadershipSection leadership={leadershipData} />
         <PartnershipsSection partnerships={partnershipsData} />
