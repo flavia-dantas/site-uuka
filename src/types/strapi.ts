@@ -61,6 +61,15 @@ export type About = {
   id: number;
   imageHero: ImageHeroItem[];
   MissionVisionValues: MissionVisionValuesItem[];
+  Schedule: ScheduleItem;
+};
+
+export type ScheduleItem = {
+  id?: number;
+  title: string;
+  startDate: string;
+  endDate: string;
+  closureDate: string;
 };
 
 export type TestimonialCard = {

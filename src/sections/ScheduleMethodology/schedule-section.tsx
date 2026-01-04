@@ -1,12 +1,56 @@
 "use client";
 
-export function ScheduleSection() {
+import type { About } from "@/types/strapi";
+import { format as dfnsFormat, isValid, parse, parseISO } from "date-fns";
+import { ptBR } from "date-fns/locale";
+
+type ScheduleSectionProps = {
+  about: About;
+};
+
+function toDate(dateStr?: string | null): Date | null {
+  if (!dateStr) return null;
+
+  const iso = parseISO(dateStr);
+  if (isValid(iso)) return iso;
+
+  if (dateStr.includes("/")) {
+    const mmdd = parse(dateStr, "MM/dd/yyyy", new Date());
+    if (isValid(mmdd)) return mmdd;
+  }
+
+  const fallback = new Date(dateStr as string);
+  return isValid(fallback) ? fallback : null;
+}
+
+function formatMonthYear(dateStr?: string | null) {
+  const d = toDate(dateStr);
+  if (!d) return null;
+  const formatted = dfnsFormat(d, "MMMM 'de' yyyy", { locale: ptBR });
+  return formatted.replace(/^./, (c) => c.toUpperCase());
+}
+
+function formatFullDate(dateStr?: string | null) {
+  const d = toDate(dateStr);
+  if (!d) return null;
+  const formatted = dfnsFormat(d, "d 'de' MMMM 'de' yyyy", { locale: ptBR });
+
+  const first = formatted.replace(/^./, (c) => c.toUpperCase());
+  return first.replace(/ de (\p{L})/u, (_m, p1) => ` de ${p1.toUpperCase()}`);
+}
+
+export function ScheduleSection({ about }: ScheduleSectionProps) {
+  const title = about?.Schedule.title;
+  const start = formatMonthYear(about?.Schedule.startDate);
+  const end = formatMonthYear(about?.Schedule.endDate);
+  const closure = formatFullDate(about?.Schedule?.closureDate);
+
   return (
     <section id="cronograma" className="h-screen w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-20">
         <div className="flex justify-start">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black pt-6">
-            Ciclo 8
+            {title}
           </h1>
         </div>
 
@@ -17,7 +61,7 @@ export function ScheduleSection() {
                 Início
               </span>
               <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
-                Julho de 2025
+                {start}
               </span>
             </div>
 
@@ -26,7 +70,7 @@ export function ScheduleSection() {
                 Fim
               </span>
               <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
-                Dezembro de 2025
+                {end}
               </span>
             </div>
 
@@ -35,7 +79,7 @@ export function ScheduleSection() {
                 Encerramento
               </span>
               <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
-                17 de Janeiro de 2026
+                {closure}
               </span>
             </div>
           </div>
