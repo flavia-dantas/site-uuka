@@ -88,8 +88,9 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${isAboutOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isAboutOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </CollapsibleTrigger>
 
@@ -162,8 +163,9 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${isMethodologyOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isMethodologyOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </CollapsibleTrigger>
 
@@ -228,8 +230,9 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${isLeadershipOpen ? "rotate-180" : ""
-                      }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${
+                      isLeadershipOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </CollapsibleTrigger>
 

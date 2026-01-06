@@ -66,10 +66,11 @@ export function TestimonialsSection({
                         {[...Array(5)].map((_, index) => (
                           <Star
                             key={index}
-                            className={`w-5 h-5 ${index < testimonial.rating
-                              ? "fill-black text-black"
-                              : "fill-[#f9c57b] text-black"
-                              }`}
+                            className={`w-5 h-5 ${
+                              index < testimonial.rating
+                                ? "fill-black text-black"
+                                : "fill-[#f9c57b] text-black"
+                            }`}
                           />
                         ))}
                       </div>

@@ -72,8 +72,7 @@ export default async function Home() {
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />
-        <ScheduleMethodologySection about={landingPage.About}
-        />
+        <ScheduleMethodologySection about={landingPage.About} />
         <ImpactOverviewSection impact={impactData} />
         <VirtuousCycleLeadershipSection />
         <LeadershipSection leadership={leadershipData} />
