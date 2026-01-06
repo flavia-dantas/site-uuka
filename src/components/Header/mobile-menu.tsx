@@ -88,9 +88,8 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isAboutOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${isAboutOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </CollapsibleTrigger>
 
@@ -163,9 +162,8 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isMethodologyOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${isMethodologyOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </CollapsibleTrigger>
 
@@ -182,11 +180,11 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </a>
 
                   <a
-                    href="#impacto"
+                    href="#uuka-em-numeros"
                     onClick={handleLinkClick}
                     className="block px-4 py-2 text-[#F59F23] hover:text-[#F9c57b] hover:bg-black rounded-lg transition-colors text-sm"
                   >
-                    Impacto
+                    Uuka em números
                   </a>
 
                   <a
@@ -230,9 +228,8 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   </span>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`w-4 h-4 transition-transform cursor-pointer ${
-                      isLeadershipOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform cursor-pointer ${isLeadershipOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </CollapsibleTrigger>
 
