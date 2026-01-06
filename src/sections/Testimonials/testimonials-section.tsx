@@ -45,7 +45,7 @@ export function TestimonialsSection({
       id="depoimentos"
       className="pt-[72px] h-screen w-full bg-white text-black"
     >
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between gap-6 p-6 md:p-12 lg:p-16">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between gap-6 p-6 md:p-8 lg:p-16">
         <div className="flex items-center justify-center">
           <div className="w-full max-w-6xl relative">
             <Carousel
@@ -66,11 +66,10 @@ export function TestimonialsSection({
                         {[...Array(5)].map((_, index) => (
                           <Star
                             key={index}
-                            className={`w-5 h-5 ${
-                              index < testimonial.rating
-                                ? "fill-black text-black"
-                                : "fill-[#f9c57b] text-black"
-                            }`}
+                            className={`w-5 h-5 ${index < testimonial.rating
+                              ? "fill-black text-black"
+                              : "fill-[#f9c57b] text-black"
+                              }`}
                           />
                         ))}
                       </div>

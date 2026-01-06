@@ -40,8 +40,8 @@ export function PartnershipsSection({
           </div>
 
           <div className="w-full lg:flex-1 flex items-center justify-center">
-            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl md:min-h-96 text-center flex flex-col justify-between">
-              <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black mb-4 sm:mb-6">
+            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl text-center flex flex-col justify-center gap-y-6">
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium text-black">
                 Você ou a sua empresa pode nos apoiar!
               </p>
 

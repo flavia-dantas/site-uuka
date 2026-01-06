@@ -9,16 +9,14 @@ import {
 import type { About } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useMemo, useState } from "react";
-import { ImpactOverviewSection } from "./impact-overview-section";
 import { MethodologySection } from "./methodology-section";
 import { ScheduleSection } from "./schedule-section";
 
 type Props = {
   about: About;
-  impact: About["impact"];
 };
 
-export function ScheduleMethodologySection({ about, impact }: Props) {
+export function ScheduleMethodologySection({ about }: Props) {
   const plugin = useMemo(
     () => Autoplay({ delay: 5000, stopOnInteraction: true }),
     []
@@ -32,7 +30,6 @@ export function ScheduleMethodologySection({ about, impact }: Props) {
     const map: Record<string, number> = {
       "#cronograma": 0,
       "#metodologia": 1,
-      "#impacto": 2,
     };
 
     function handleHash() {
@@ -76,10 +73,6 @@ export function ScheduleMethodologySection({ about, impact }: Props) {
 
             <CarouselItem className="pl-0">
               <MethodologySection />
-            </CarouselItem>
-
-            <CarouselItem className="pl-0">
-              <ImpactOverviewSection impact={impact} />
             </CarouselItem>
           </CarouselContent>
         </Carousel>

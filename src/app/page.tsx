@@ -4,6 +4,7 @@ import { strapiFetch } from "@/connection/api";
 import { AboutSection } from "@/sections/About/about-section";
 import { ContactSection } from "@/sections/Contact/contact-section";
 import { HeroSection } from "@/sections/Hero/hero-section";
+import { ImpactOverviewSection } from "@/sections/ImpactOverview/impact-overview-section";
 import { LeadershipSection } from "@/sections/Leadership/leadership-section";
 import { MissionVisionValuesSection } from "@/sections/MissionVisionValues/mission-vision-values-section";
 import { PartnershipsSection } from "@/sections/Partnerships/partnerships-section";
@@ -71,10 +72,9 @@ export default async function Home() {
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />
-        <ScheduleMethodologySection
-          about={landingPage.About}
-          impact={impactData}
+        <ScheduleMethodologySection about={landingPage.About}
         />
+        <ImpactOverviewSection impact={impactData} />
         <VirtuousCycleLeadershipSection />
         <LeadershipSection leadership={leadershipData} />
         <PartnershipsSection partnerships={partnershipsData} />

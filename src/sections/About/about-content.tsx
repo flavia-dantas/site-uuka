@@ -4,9 +4,9 @@ export default function AboutContent() {
   return (
     <section
       id="somos"
-      className="pt-[72px] h-screen w-full bg-black text-white"
+      className="pt-[72px] min-h-screen w-full bg-black text-white"
     >
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
+      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
         <div className="max-w-4xl">
           <p className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl mb-2">
             Somos pessoas inconformadas com a dissonância social e racismo
