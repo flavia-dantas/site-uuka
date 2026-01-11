@@ -15,7 +15,7 @@ const eslintConfig = [
   {
     plugins: { prettier: pluginPrettier },
     rules: {
-      "prettier/prettier": "error",
+      "prettier/prettier": "off",
     },
     ignores: [
       "node_modules/**",
