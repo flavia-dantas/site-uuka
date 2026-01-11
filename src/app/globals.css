@@ -18,39 +18,56 @@ body {
 */
 
 .custom-scrollbar {
-  /* Show scrollbar by default
-     - Firefox: use thin scrollbar and set thumb color
-     - WebKit: width/height defined in ::-webkit-scrollbar
-  */
-  scrollbar-width: thin; /* Firefox: "auto" | "thin" | "none" */
-  scrollbar-color: #9ca3af transparent; /* thumb + track */
+
+  scrollbar-width: none;
+  /* Firefox: hide scrollbar on mobile */
 }
 
-/* WebKit-based browsers: show and style scrollbar */
+/* WebKit-based browsers: hide scrollbar on mobile */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  display: none;
+  /* Hide scrollbar on mobile */
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* Desktop: show and style scrollbar */
+@media (min-width: 768px) {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    /* Firefox: use thin scrollbar on desktop */
+    scrollbar-color: #9ca3af transparent;
+    /* thumb + track */
+  }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #9ca3af; /* gray thumb */
-  border-radius: 9999px;
-  border: 3px solid transparent;
-}
+  .custom-scrollbar::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    height: 10px;
+  }
 
-/* Hover: slightly darker thumb (also applies when hovering the scrollable area) */
-.custom-scrollbar::-webkit-scrollbar-thumb:hover,
-.custom-scrollbar:hover::-webkit-scrollbar-thumb {
-  background-color: #6b7280;
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    /* gray thumb */
+    border-radius: 9999px;
+    border: 3px solid transparent;
+  }
+
+  /* Hover: slightly darker thumb (also applies when hovering the scrollable area) */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #6b7280;
+  }
 }
 
 /* Optional: if you want the scrollbar to widen on hover, uncomment below
-.custom-scrollbar:hover::-webkit-scrollbar {
-  width: 12px;
+@media (min-width: 768px) {
+  .custom-scrollbar:hover::-webkit-scrollbar {
+    width: 12px;
+  }
 }
+*/
 
 /* End of custom-scrollbar rules */

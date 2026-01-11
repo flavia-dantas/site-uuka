@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useLoading } from "@/context/page-loading-context";
 import { ImageHeroItem } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
 import { CircleX } from "lucide-react";
@@ -15,6 +16,8 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ items }: HeroSectionProps) {
+  const { setIsLoaded } = useLoading();
+
   const plugin = React.useMemo(
     () => Autoplay({ delay: 4000, stopOnInteraction: true }),
     []
@@ -50,7 +53,7 @@ export function HeroSection({ items }: HeroSectionProps) {
 
               return (
                 <CarouselItem key={item.id} className="pl-0">
-                  <div className="relative w-full">
+                  <div className="relative w-full bg-black">
                     <Image
                       src={imageUrl}
                       alt={alt}
@@ -60,6 +63,11 @@ export function HeroSection({ items }: HeroSectionProps) {
                       quality={100}
                       className="w-full h-auto object-cover"
                       style={{ objectPosition: "top" }}
+                      onLoadingComplete={() => {
+                        if (isFirstImage) {
+                          setIsLoaded(true);
+                        }
+                      }}
                     />
 
                     {overlayText && (
