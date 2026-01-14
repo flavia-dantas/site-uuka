@@ -1,6 +1,8 @@
 "use client";
 
+import Logo from "@/assets/images/logo.png";
 import { Header as HeaderButton } from "@/types/strapi";
+import Image from "next/image";
 import { Button } from "../ui/button";
 import DesktopMenu from "./desktop-menu";
 import MobileMenu from "./mobile-menu";
@@ -15,6 +17,13 @@ export function Header({ header }: HeaderProps) {
       <div className="flex justify-between items-center gap-4 h-full">
         <div className="flex items-center gap-3">
           <MobileMenu header={header} />
+
+          <Image
+            src={Logo}
+            alt="Logo EI, UUKAS!"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+          />
+
           <span className="font-bold text-base md:text-lg whitespace-nowrap">
             EI, UUKAS!
           </span>

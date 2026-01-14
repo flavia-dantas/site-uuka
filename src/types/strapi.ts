@@ -127,6 +127,7 @@ export type LeadershipCard = {
   position: string;
   photo: Image;
   isColor?: boolean;
+  linkedin: string;
 };
 
 export type Leadership = {

@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Testimonials } from "@/types/strapi";
-import { CircleX, Star } from "lucide-react";
+import { CircleX } from "lucide-react";
 
 type TestimonialsSectionProps = {
   testimonials?: Testimonials;
@@ -62,19 +62,6 @@ export function TestimonialsSection({
                     className="basis-full md:basis-1/2 lg:basis-1/3"
                   >
                     <div className="bg-[#f9c57b] rounded-2xl p-4 h-80 2xl:h-[400px] flex flex-col justify-between">
-                      <div className="flex gap-1 mb-3">
-                        {[...Array(5)].map((_, index) => (
-                          <Star
-                            key={index}
-                            className={`w-5 h-5 ${
-                              index < (testimonial?.rating ?? 0)
-                                ? "fill-black text-black"
-                                : "fill-[#f9c57b] text-black"
-                            }`}
-                          />
-                        ))}
-                      </div>
-
                       <div className="mb-4">
                         <h3 className="font-bold text-black md:text-base lg:text-lg text-lg mb-1">
                           {testimonial?.name ?? ""}

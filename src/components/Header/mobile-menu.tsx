@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from "@/assets/images/logo.png";
 import {
   Collapsible,
   CollapsibleContent,
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { Header as HeaderButton } from "@/types/strapi";
 import { ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/button";
 
@@ -48,6 +50,12 @@ export default function MobileMenu({ header }: MobileMenuProps) {
         <div className="flex flex-col h-full">
           {/* Header do Menu Mobile com botão de fechar */}
           <div className="p-6 border-b border-[#F59F23]/20 flex items-center justify-between">
+            <Image
+              src={Logo}
+              alt="Logo EI, UUKAS!"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            />
+
             <SheetTitle className="text-xl font-bold text-[#F59F23]">
               EI, UUKAS!
             </SheetTitle>

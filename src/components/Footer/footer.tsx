@@ -21,7 +21,7 @@ export function Footer({ contact }: FooterProps) {
           />
         </div>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 text-base">
           <div className="flex flex-col gap-2 md:items-start md:text-left">
             <p>© 2026 UUKA. Todos os direitos reservados.</p>
             <p>

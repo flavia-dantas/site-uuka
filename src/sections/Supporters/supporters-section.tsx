@@ -79,13 +79,13 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
                       key={image.id}
                       className="basis-full md:basis-1/2 lg:basis-1/4"
                     >
-                      <div className="flex items-center justify-center h-16 md:h-20">
+                      <div className="flex items-center justify-center h-20 sm:h-24 md:h-32 lg:h-40">
                         <Image
                           src={imageUrl}
                           alt={alt}
-                          width={image?.width ?? 200}
-                          height={image?.height ?? 200}
-                          className="max-h-16 md:max-h-20 max-w-full object-contain"
+                          width={image?.width ?? 400}
+                          height={image?.height ?? 400}
+                          className="h-full w-auto object-contain"
                         />
                       </div>
                     </CarouselItem>

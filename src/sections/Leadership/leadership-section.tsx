@@ -92,7 +92,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                   return (
                     <CarouselItem
                       key={member.id}
-                      className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%] md:basis-1/3 lg:basis-1/4"
+                      className="pl-2 md:pl-4 min-w-[320px] flex-[0_0_auto]"
                     >
                       <div
                         className="relative group cursor-pointer"
@@ -102,15 +102,15 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                         onKeyDown={(e) => handleKeyToggle(e, member.id)}
                         aria-pressed={tappedId === member.id}
                       >
-                        <div className="relative w-full h-80 sm:h-96 md:h-[24rem] rounded-lg overflow-hidden">
+                        <div className="relative w-full h-80 sm:h-96 md:h-[24rem] xl:h-[26rem] 2xl:h-[28rem] rounded-lg overflow-hidden">
                           <Image
                             src={imageUrl}
                             alt={alt}
                             fill
-                            sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 33vw, 25vw"
+                            sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, 320px"
                             quality={100}
                             className={cn(
-                              "object-cover transition-all duration-700",
+                              "object-cover object-top transition-all duration-700",
                               member?.isColor || tappedId === member.id
                                 ? "grayscale-0"
                                 : "grayscale group-hover:grayscale-0"
@@ -118,14 +118,19 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
                           <div className="absolute bottom-0 left-0 right-0 p-4">
-                            <div className="bg-black/30 rounded-lg p-3 group-hover:bg-black/40 transition-all duration-700">
+                            <a
+                              href={member?.linkedin ?? ""}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block bg-black/30 rounded-lg p-3 group-hover:bg-black/40 transition-all duration-700 min-h-24"
+                            >
                               <h3 className="text-sm sm:text-base font-bold uppercase text-white drop-shadow-lg">
                                 {member?.name ?? ""}
                               </h3>
                               <p className="text-xs sm:text-sm text-white/90 uppercase drop-shadow-lg">
                                 {member?.position ?? ""}
                               </p>
-                            </div>
+                            </a>
                           </div>
                         </div>
                       </div>
