@@ -95,7 +95,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                       className="pl-2 md:pl-4 min-w-[320px] flex-[0_0_auto]"
                     >
                       <div
-                        className="relative group cursor-pointer"
+                        className="relative group"
                         onClick={() => toggleTapped(member.id)}
                         role="button"
                         tabIndex={0}
@@ -117,7 +117,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                             )}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
-                          <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <div className="absolute bottom-0 left-0 right-0 p-4 cursor-pointer">
                             <a
                               href={member?.linkedin ?? ""}
                               target="_blank"
