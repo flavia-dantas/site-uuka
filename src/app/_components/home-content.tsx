@@ -2,7 +2,6 @@
 
 import { Footer } from "@/components/Footer/footer";
 import { Header } from "@/components/Header/header";
-import { PageLoadingContext } from "@/context/page-loading-context";
 import { AboutSection } from "@/sections/About/about-section";
 import { ContactSection } from "@/sections/Contact/contact-section";
 import { HeroSection } from "@/sections/Hero/hero-section";
@@ -32,28 +31,25 @@ export function HomeContent({ landingPage }: HomeContentProps) {
   const impactData = landingPage.About.impact || undefined;
 
   return (
-    <PageLoadingContext>
-      <div className="relative">
-        <Header header={headerData} />
+    <div className="relative">
+      <Header header={headerData} />
 
-        <main className="w-full overflow-y-scroll h-screen custom-scrollbar">
-          <HeroSection items={imageHeroItems} />
-          <AboutSection />
-          <MissionVisionValuesSection />
-          <ScheduleMethodologySection about={landingPage.About} />
-          <ImpactOverviewSection impact={impactData} />
-          <VirtuousCycleLeadershipSection />
-          <LeadershipSection leadership={leadershipData} />
-          <PartnershipsSection partnerships={partnershipsData} />
-          <SupportersSection supporters={supportersData} />
-          <TestimonialsSection testimonials={testimonialsData} />
-          <ContactSection contact={contactData} />
-          <Footer contact={contactData} />
-        </main>
+      <main className="w-full overflow-y-scroll h-screen custom-scrollbar">
+        <HeroSection items={imageHeroItems} />
+        <AboutSection />
+        <MissionVisionValuesSection />
+        <ScheduleMethodologySection about={landingPage.About} />
+        <ImpactOverviewSection impact={impactData} />
+        <VirtuousCycleLeadershipSection />
+        <LeadershipSection leadership={leadershipData} />
+        <PartnershipsSection partnerships={partnershipsData} />
+        <SupportersSection supporters={supportersData} />
+        <TestimonialsSection testimonials={testimonialsData} />
+        <ContactSection contact={contactData} />
+        <Footer contact={contactData} />
+      </main>
 
-        <ScrollToTopButton />
-      </div>
-    </PageLoadingContext>
+      <ScrollToTopButton />
+    </div>
   );
 }
-

@@ -49,7 +49,7 @@ export function Footer({ contact }: FooterProps) {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-2 md:items-end md:text-right">
+          <div className="flex flex-col gap-4 md:items-end md:text-right">
             {contact?.ButtonLink ? (
               <Link
                 href={contact.ButtonLink}

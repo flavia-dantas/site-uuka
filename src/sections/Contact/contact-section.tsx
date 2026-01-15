@@ -20,7 +20,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
                 return (
                   <div key={item.id} className="flex items-center gap-4">
                     {imageUrl && (
-                      <Image src={imageUrl} alt={alt} width={24} height={24} />
+                      <Image src={imageUrl} alt={alt} width={40} height={40} />
                     )}
                     {item?.link ? (
                       <a
