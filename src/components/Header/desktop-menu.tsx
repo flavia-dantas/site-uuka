@@ -21,7 +21,7 @@ export default function DesktopMenu() {
           >
             <a
               href="#somos"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              className="text-[#F59F23] hover:text-[#C7C7C7] font-bold text-sm md:text-base"
               aria-label="Navegar para seção Somos"
             >
               Somos
@@ -35,7 +35,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#publico-alvo"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Público-alvo"
               >
                 Público-alvo
@@ -45,7 +45,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#por-que"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Por que?"
               >
                 Por que?
@@ -55,7 +55,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#missao"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Missão"
               >
                 Missão
@@ -65,7 +65,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#visao"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Visão"
               >
                 Visão
@@ -75,7 +75,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#valores"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Valores"
               >
                 Valores
@@ -92,7 +92,7 @@ export default function DesktopMenu() {
           >
             <a
               href="#metodologia"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              className="text-[#F59F23] hover:text-[#C7C7C7] font-bold text-sm md:text-base"
               aria-label="Navegar para seção Metodologia"
             >
               Metodologia
@@ -106,7 +106,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#cronograma"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Cronograma"
               >
                 Cronograma
@@ -116,7 +116,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#uuka-em-numeros"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Uuka em Números"
               >
                 Uuka em Números
@@ -126,7 +126,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#lideranca"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Liderança e Autoconhecimento"
               >
                 Liderança e Autoconhecimento
@@ -136,7 +136,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#ciclo-virtuoso"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Ciclo Virtuoso"
               >
                 Ciclo Virtuoso
@@ -153,7 +153,7 @@ export default function DesktopMenu() {
           >
             <a
               href="#diretoria"
-              className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              className="text-[#F59F23] hover:text-[#C7C7C7] font-bold text-sm md:text-base"
               aria-label="Navegar para seção Diretoria"
             >
               Diretoria
@@ -167,7 +167,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#parcerias"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Parcerias"
               >
                 Parcerias
@@ -176,7 +176,7 @@ export default function DesktopMenu() {
             <NavigationMenuLink asChild>
               <a
                 href="#apoiadores"
-                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base hover:font-bold"
                 aria-label="Navegar para seção Apoiadores"
               >
                 Apoiadores
@@ -190,7 +190,7 @@ export default function DesktopMenu() {
           <NavigationMenuLink asChild>
             <a
               href="#depoimentos"
-              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
+              className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base font-bold"
               aria-label="Navegar para seção Depoimentos"
             >
               Depoimentos
@@ -203,7 +203,7 @@ export default function DesktopMenu() {
           <NavigationMenuLink asChild>
             <a
               href="#contatos"
-              className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
+              className="text-[#F59F23] hover:text-[#C7C7C7] hover:bg-black text-sm md:text-base font-bold"
               aria-label="Navegar para seção Contatos"
             >
               Contatos
