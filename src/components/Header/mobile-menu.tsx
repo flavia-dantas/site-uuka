@@ -75,7 +75,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
 
           {/* Links do Menu Mobile */}
           <nav className="flex-1 overflow-y-auto p-4  custom-scrollbar">
-            <div className="space-y-2">
+            <div className="space-y-2 ">
               {/* Somos */}
               <Collapsible open={isAboutOpen} onOpenChange={setIsAboutOpen}>
                 <CollapsibleTrigger
@@ -286,7 +286,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
             </div>
 
             {/* Menu Mobile */}
-            <div className="fixed bottom-4 left-0 min-w-[320px] p-6 bg-black z-50">
+            <div className="fixed pb-[env(safe-area-inset-bottom)] left-0 min-w-[320px] p-6 bg-black z-50">
               <Button
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
